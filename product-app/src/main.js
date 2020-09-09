@@ -7,6 +7,9 @@ import { ValidationObserver } from 'vee-validate';
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
 
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 export const eventBus = new Vue();
 
 new Vue({
