@@ -41,7 +41,7 @@ export default {
   },
   created() {
     eventBus.$on("addedProduct", (product) => {
-      if (this.productList.length < 12) {
+      if (this.productList.length < 6) {
         this.productList.push(product);
         eventBus.$emit("progressBarUpdated", this.productList.length);
       } else {

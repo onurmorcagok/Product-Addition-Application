@@ -1,7 +1,7 @@
 <template>
     <div class="progress">
-      <div class="progress-bar bg-info" role="progressbar" :style="{width: progress + '%' }" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        {{ currentItem }}/12
+      <div class="progress-bar bg-info" role="progressbar" :style="{ width: progress + '%' }" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        {{ currentItem }}/10
       </div>
     </div>
 </template>
@@ -18,7 +18,7 @@ import { eventBus } from '../main'
         created(){
             eventBus.$on("progressBarUpdated", (productListCount) => {
                 this.currentItem = productListCount;
-                this.progress = productListCount * 12;
+                this.progress = productListCount * 10;
 
             })
         }
