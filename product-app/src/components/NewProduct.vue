@@ -59,7 +59,12 @@
 
 <script>
 import { eventBus } from "../main";
+import { ValidationProvider, ValidationObserver } from 'vee-validate';
 export default {
+  components:{
+    ValidationProvider,
+    ValidationObserver
+  },
   data() {
     return {
       product: {
